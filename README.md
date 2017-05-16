@@ -63,8 +63,8 @@ git rebase upstream/develop
 
 2. Follow the tutorial
 
-The [official tutorial](http://spack.readthedocs.io/en/latest/tutorial_packaging.html) is well done. The basic idea is that in many casses spack can detect
-the build system used and generate the package automatically.
+The [official tutorial](http://spack.readthedocs.io/en/latest/tutorial_packaging.html) is well done. In many cases spack can detect the build system used and
+generate the package automatically.
 
 Note that spack requires a public available source tarball.
 
