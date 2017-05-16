@@ -84,7 +84,7 @@ grep -r scons
 
 ```
 git add var/spack/repos/builtin/packages/mypackage.py
-git commit -a
+git commit
 ```
 
 4. Add dependencies
