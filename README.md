@@ -100,3 +100,30 @@ spack install mypackage
 6. Extra features: variants (greping for fun and profit)
 
 See [python variant example](https://github.com/bd4/spack/commit/f53ff116f392252030e55b214a0856b2bc506410)
+
+## Advanced Usage
+
+### Installing unpublished versions
+
+You can create a local mirror directory that contains tarballs for unreleased
+versions during development. Create `~/.spack/mirrors.yaml`:
+```
+mirrors:
+  manual: file:///home/bda/spack_mirror
+```
+
+Then put package tarball in
+`~/spack_mirror/PACKAGENAME/PACKAGENAME-VERSION.tar.gz`.
+
+I recommend using a letter based string for the version
+
+### Install multiple versions of a package depending on different versions of dependency
+
+The `^` character can be used to chain specifications for dependencies of
+a package. For example, to build turbine against python 3.4 and load it into
+the evironment:
+
+```
+spack install turbine+python^python@3.4
+spack load turbine+python^python@3.4
+```
